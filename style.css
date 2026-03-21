@@ -1,0 +1,659 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #FBF6FF;
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.bg {
+    background: white;
+    padding-bottom: 7rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0rem 9rem;
+    background: #FBF6FF;
+    padding: 13px 60px;
+    border-radius: 70px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav div {
+    display: flex;
+    align-items: center;
+}
+.brand {
+    display: flex;
+    align-items: center;
+}
+nav p {
+    padding-right: 30px;
+    font-weight: 500;
+    margin: 0;
+}
+nav a {
+    color: black;
+    text-decoration: none;
+}
+nav a:hover {
+    color: #A859F3;
+}
+nav .logo {
+    width: 30px;
+    cursor: pointer;
+}
+nav .line {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.sides {
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.sides a {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 12px;
+    background: #ffffff;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 0;
+}
+.menu-toggle span {
+    width: 22px;
+    height: 2px;
+    background: #111111;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.main {
+    font-size: 40px;
+    padding-top: 8rem;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.main p {
+    font-size: 18px;
+}
+.main button {
+    padding: 18px 60px;
+    border-radius: 50px;
+    border: 0;
+    background: #A859F3;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.main button a {
+    color: white;
+    text-decoration: none;
+}
+.main button a:hover {
+    color: rgb(114, 114, 114);
+}
+
+.slides {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    margin-top: 5rem;
+}
+.slides::before, .slides::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+}
+.slides::before { left: 0; background: linear-gradient(to right, #fff, transparent); }
+.slides::after  { right: 0; background: linear-gradient(to left, #fff, transparent); }
+
+.slides-track {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+}
+.slides-track:hover { animation-play-state: paused; }
+
+.slides-track img {
+    width: 300px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+@keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.overlap {
+    margin-top: 10rem;
+}
+.before, .after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 20rem 0px 20rem;
+    border-radius: 30px;
+    background: white;
+    padding: 80px 10px;
+    font-size: 22px;
+}
+.before div {
+    padding-left: 40px;
+}
+.after div {
+    padding-right: 40px;
+}
+.before p, .after p {
+    font-size: 20px;
+    padding: 0;
+}
+.before img, .after img {
+    border-radius: 30px;
+}
+.before button, .after button {
+    padding: 15px 45px;
+    font-size: 17px;
+    border: 0;
+    background: #E5CDFB;
+    border-radius: 50px;
+}
+
+.exp {
+    margin: 100px 5rem 0px 5rem;
+    background: white;
+    border-radius: 30px;
+    padding: 80px 10px;
+    text-align: center;
+}
+.exp h1 {
+    font-size: 55px;
+}
+.exp p {
+    font-size: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10rem;
+    border-top: 2.5px solid #cfcfcf;
+    border-bottom: 2.5px solid #cfcfcf;
+    padding: 3rem 0px;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+    padding: 0 1rem;
+}
+.video video {
+    width: 60rem;
+    height: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.Pr {
+    margin-top: 10rem;
+    padding: 6em 8rem;
+    background: #ffffff;
+}
+#inv {
+    width: 30px;
+}
+.hh h1 {
+    padding-left: 14rem;
+    font-size: 55px;
+}
+.hh p {
+    padding-left: 14rem;
+    font-size: 20px;
+}
+.near img {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 20px;
+}
+.near {
+    display: flex;
+    justify-content: center;
+}
+.vs {
+    background: #FBF6FF;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 20px;
+    margin-top: 5rem;
+}
+.near div h4, .near div p {
+    padding-left: 50px;
+}
+.near div h4 {
+    padding-left: 50px;
+    font-size: 20px;
+}
+.near div p {
+    padding-left: 50px;
+    font-size: 19px;
+}
+
+#donate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10rem 8rem;
+    background: #FBF6FF;
+    border-radius: 20px;
+    padding: 90px 2px;
+}
+#donate h1 {
+    font-size: 54px;
+}
+#donate p {
+    padding: 0;
+}
+#donate input {
+    padding: 30px 22rem 30px 40px;
+    border-radius: 20px;
+    border: 0;
+    margin-bottom: 25px;
+    background: #FBF6FF;
+}
+.inputPr {
+    background: #ffff;
+    margin-left: 50px;
+    padding: 60px 50px;
+    border-radius: 20px;
+}
+#donate button {
+    border-radius: 20px;
+    border: 0;
+    background: #A859F3;
+    color: white;
+    padding: 18px 15rem;
+    margin-top: 2.5rem;
+    cursor: pointer;
+    font-size: 23px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 20px 7rem;
+}
+footer .logoPart {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sect {
+    display: flex;
+    gap: 100px;
+}
+.social {
+    display: flex;
+    gap: 20px;
+}
+.last {
+    display: flex;
+    background: #ffffff;
+    overflow: hidden;
+}
+/* ===== TABLET (max-width: 1024px) ===== */
+@media (max-width: 1024px) {
+    nav {
+        margin: 0 2rem;
+        padding: 13px 30px;
+    }
+
+    .before, .after {
+        margin: 50px 4rem 0 4rem;
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .before div, .after div {
+        padding: 20px 0 0 0;
+    }
+
+    .after {
+        flex-direction: column-reverse;
+    }
+
+    .grid {
+        margin: 4rem 2rem;
+    }
+
+    .exp {
+        margin: 60px 2rem 0 2rem;
+    }
+    .video video {
+        width: 100%;
+    height: 100%;
+    }
+    .Pr {
+        padding: 4rem 3rem;
+    }
+
+    .hh h1, .hh p {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .near {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #inv {
+        display: none;
+    }
+
+    .vs {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    #donate {
+        flex-direction: column;
+        margin: 6rem 3rem;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .inputPr {
+        margin-left: 0;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    #donate input {
+        padding: 20px 40px;
+        width: 100%;
+    }
+
+    #donate button {
+        padding: 18px 4rem;
+        width: 100%;
+    }
+
+    footer {
+        padding: 30px 3rem;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .sect {
+        gap: 40px;
+        justify-content: center;
+    }
+}
+
+/* ===== MOBILE (max-width: 768px) ===== */
+@media (max-width: 768px) {
+    nav {
+        margin: 0 1rem;
+        padding: 13px 20px;
+        border-radius: 20px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .sides {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 1rem;
+        right: 1rem;
+        background: #FBF6FF;
+        border-radius: 20px;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 16px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    }
+
+    .sides.open {
+        display: flex;
+    }
+
+    .main h1 {
+        font-size: 2.4rem;
+        padding-top: 4rem;
+    }
+
+    .main p {
+        font-size: 16px;
+    }
+
+    .main br {
+        display: none;
+    }
+
+    .main button {
+        padding: 15px 40px;
+        font-size: 16px;
+    }
+
+    .slides-track img {
+        width: 200px;
+    }
+
+    .before, .after {
+        margin: 30px 1rem 0 1rem;
+        padding: 30px 15px;
+        border-radius: 20px;
+    }
+
+    .overlap {
+        margin-top: 5rem;
+    }
+
+    .exp {
+        margin: 40px 1rem 0 1rem;
+        padding: 40px 15px;
+    }
+
+    .exp h1 {
+        font-size: 36px;
+    }
+
+    .exp p {
+        font-size: 16px;
+    }
+
+    .exp br {
+        display: none;
+    }
+    .video video {
+        width: 100%;
+    height: 100%;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        margin: 3rem 1rem;
+        gap: 2rem;
+    }
+
+    .grid div {
+        border-bottom: 1px solid #cfcfcf;
+        padding-bottom: 2rem;
+    }
+
+    .grid div:last-child {
+        border-bottom: none;
+    }
+
+    .video {
+        margin-top: 3rem;
+    }
+
+    .Pr {
+        margin-top: 5rem;
+        padding: 3rem 1rem;
+    }
+
+    .hh h1 {
+        font-size: 36px;
+    }
+
+    .hh p {
+        font-size: 16px;
+    }
+
+    .hh br {
+        display: none;
+    }
+
+    .near div h4, .near div p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .near div h4 {
+        font-size: 17px;
+    }
+
+    .near div p {
+        font-size: 16px;
+    }
+
+    #donate {
+        margin: 4rem 1rem;
+        padding: 40px 15px;
+        border-radius: 15px;
+    }
+
+    #donate h1 {
+        font-size: 32px;
+    }
+
+    #donate br {
+        display: none;
+    }
+
+    .inputPr {
+        padding: 30px 20px;
+        width: 100%;
+    }
+
+    #donate input {
+        padding: 18px 20px;
+        width: 100%;
+        font-size: 15px;
+    }
+
+    #donate button {
+        padding: 18px;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    footer {
+        padding: 30px 1.5rem;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    footer h1 {
+        font-size: 24px;
+    }
+
+    footer br {
+        display: none;
+    }
+
+    .sect {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .social {
+        justify-content: center;
+    }
+
+    .last img {
+        min-width: 50%;
+    }
+}
+
+/* ===== SMALL MOBILE (max-width: 480px) ===== */
+@media (max-width: 480px) {
+    .main h1 {
+        font-size: 1.9rem;
+    }
+
+    .before button, .after button {
+        padding: 12px 30px;
+        font-size: 15px;
+    }
+    .video video {
+        width: 100%;
+    height: 100%;
+    }
+    .exp h1, .hh h1 {
+        font-size: 28px;
+    }
+
+    #donate h1 {
+        font-size: 26px;
+    }
+}
+
