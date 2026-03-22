@@ -17,7 +17,7 @@ body {
     padding: 0;
     margin: 0;
     background: #FBF6FF;
-    font-family: "Bricolage Grotesque", sans-serif;
+    font-family: "Bricolage Grotesque";
 }
 
 .bg {
@@ -37,6 +37,9 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+nav .first {
+    font-weight: 900;
 }
 nav div {
     display: flex;
@@ -75,7 +78,9 @@ nav .line {
     display: inline-flex;
     align-items: center;
 }
-
+.brand .span{
+    letter-spacing: 5px;
+}
 .menu-toggle {
     display: none;
     width: 44px;
@@ -117,23 +122,28 @@ nav .line {
     font-size: 18px;
 }
 .main button {
-    padding: 18px 60px;
-    border-radius: 50px;
+    font-family: "Bricolage Grotesque";
+    padding: 20px 70px;
+    border-radius: 20px;
     border: 0;
-    background: #A859F3;
+    /* background: #A859F3; */
     color: white;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 550;
     margin-top: 20px;
     cursor: pointer;
+}
+.lBtn {
+    background: #A859F3;
+}
+.rBtn {
+    background: #FFB200;
+    margin-left: 20px;
 }
 .main button a {
     color: white;
     text-decoration: none;
 }
-.main button a:hover {
-    color: rgb(114, 114, 114);
-}
-
 .slides {
     overflow: hidden;
     width: 100%;
@@ -307,21 +317,30 @@ nav .line {
     margin-bottom: 25px;
     background: #FBF6FF;
 }
+#donate input:focus {
+  outline: none;
+}
 .inputPr {
     background: #ffff;
     margin-left: 50px;
     padding: 60px 50px;
     border-radius: 20px;
 }
+#donate .textarea {
+    height: 100px;
+    padding-bottom: 18rem;
+}
 #donate button {
+    /* font-family: "Bricolage Grotesque"; */
     border-radius: 20px;
     border: 0;
     background: #A859F3;
     color: white;
-    padding: 18px 15rem;
+    padding: 18px 13.5rem;
     margin-top: 2.5rem;
     cursor: pointer;
     font-size: 23px;
+    font-weight: 550;
 }
 
 footer {
@@ -343,6 +362,10 @@ footer .logoPart {
 .social {
     display: flex;
     gap: 20px;
+}
+.social img {
+    width: 40px;
+    cursor: pointer;
 }
 .last {
     display: flex;
