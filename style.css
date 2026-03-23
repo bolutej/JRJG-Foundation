@@ -1,17 +1,20 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 14px;
 }
 
 * {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-img {
+/* img {
     max-width: 100%;
     height: auto;
     display: block;
-}
+} */
 
 body {
     padding: 0;
@@ -38,7 +41,7 @@ nav {
     top: 0;
     z-index: 1000;
 }
-nav .first {
+.first {
     font-weight: 900;
 }
 nav div {
@@ -61,11 +64,11 @@ nav a {
 nav a:hover {
     color: #A859F3;
 }
-nav .logo {
-    width: 30px;
+ .logo {
+    width: 35px;
     cursor: pointer;
 }
-nav .line {
+.line {
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -78,7 +81,7 @@ nav .line {
     display: inline-flex;
     align-items: center;
 }
-.brand .span{
+ .span{
     letter-spacing: 5px;
 }
 .menu-toggle {
@@ -112,25 +115,29 @@ nav .line {
 }
 
 .main {
-    font-size: 40px;
+    
     padding-top: 8rem;
     text-align: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    /* padding-left: 1rem;
+    padding-right: 1rem; */
+}
+.main h1 {
+    font-size: 3.5rem;
+    letter-spacing: 5px;
 }
 .main p {
     font-size: 18px;
+    margin-top: 20px;
 }
 .main button {
     font-family: "Bricolage Grotesque";
-    padding: 20px 70px;
+    padding: 15px 60px;
     border-radius: 20px;
     border: 0;
-    /* background: #A859F3; */
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 550;
-    margin-top: 20px;
+    margin-top: 50px;
     cursor: pointer;
 }
 .lBtn {
@@ -194,7 +201,7 @@ nav .line {
     border-radius: 30px;
     background: white;
     padding: 80px 10px;
-    font-size: 22px;
+    
 }
 .before div {
     padding-left: 40px;
@@ -202,19 +209,26 @@ nav .line {
 .after div {
     padding-right: 40px;
 }
-.before p, .after p {
+.before h4, .after h4 {
     font-size: 20px;
-    padding: 0;
+    padding-top: 30px;
+    letter-spacing: 2.5px;
+    line-height: 1.7;
+}
+.before p, .after p {
+    font-size: 16px;
+    padding-top: 50px;
 }
 .before img, .after img {
     border-radius: 30px;
+    width: 28rem;
 }
 .before button, .after button {
-    padding: 15px 45px;
+    padding: 13px 40px;
     font-size: 17px;
     border: 0;
     background: #E5CDFB;
-    border-radius: 50px;
+    border-radius: 20px;
 }
 
 .exp {
@@ -225,10 +239,12 @@ nav .line {
     text-align: center;
 }
 .exp h1 {
-    font-size: 55px;
+    font-size: 3.5rem;
+    letter-spacing: 4px;
 }
 .exp p {
-    font-size: 20px;
+    padding-top: 30px;
+    font-size: 17px;
 }
 
 .grid {
@@ -261,15 +277,20 @@ nav .line {
 #inv {
     width: 30px;
 }
-.hh h1 {
-    padding-left: 14rem;
-    font-size: 55px;
+.hh {
+    padding-left: 13rem;
+}
+.hh h1 {   
+    font-size: 3.5rem;
+    letter-spacing: 4px;
 }
 .hh p {
-    padding-left: 14rem;
-    font-size: 20px;
+    padding-top: 20px;
+    font-size: 15px;
+    letter-spacing: 1.5px;
 }
 .near img {
+    width: 35rem;
     border-top-left-radius: 30px;
     border-top-right-radius: 20px;
 }
@@ -279,39 +300,42 @@ nav .line {
 }
 .vs {
     background: #FBF6FF;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 20px;
+    border-radius: 30px;
     margin-top: 5rem;
-}
-.near div h4, .near div p {
-    padding-left: 50px;
 }
 .near div h4 {
     padding-left: 50px;
-    font-size: 20px;
+    font-size: 18px;
+    padding-top: 30px;
 }
 .near div p {
     padding-left: 50px;
-    font-size: 19px;
+    font-size: 14px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    padding: 30px 50px ;
 }
+
 
 #donate {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10rem 8rem;
+    /* align-items: center; */
+    justify-content: space-between;
+    margin: 10rem 4rem;
     background: #FBF6FF;
     border-radius: 20px;
-    padding: 90px 2px;
+    padding: 90px 50px;
 }
 #donate h1 {
-    font-size: 54px;
+    font-size: 3rem;
+    padding-bottom: 20px;
+    padding-top: 30px;
 }
-#donate p {
+/* #donate p {
     padding: 0;
-}
+} */
 #donate input {
-    padding: 30px 22rem 30px 40px;
+    padding: 24px 18rem 24px 40px;
     border-radius: 20px;
     border: 0;
     margin-bottom: 25px;
@@ -327,19 +351,19 @@ nav .line {
     border-radius: 20px;
 }
 #donate .textarea {
-    height: 100px;
-    padding-bottom: 18rem;
+    /* height: 100px; */
+    padding-bottom: 16rem;
 }
 #donate button {
     /* font-family: "Bricolage Grotesque"; */
-    border-radius: 20px;
+    border-radius: 15px;
     border: 0;
     background: #A859F3;
     color: white;
-    padding: 18px 13.5rem;
+    padding: 18px 13.3rem;
     margin-top: 2.5rem;
     cursor: pointer;
-    font-size: 23px;
+    font-size: 15px;
     font-weight: 550;
 }
 
@@ -350,21 +374,26 @@ footer {
     background: #ffffff;
     padding: 20px 7rem;
 }
-footer .logoPart {
+ .logoPart {
     display: flex;
     align-items: center;
     gap: 10px;
+    padding-bottom: 30px;
 }
 .sect {
     display: flex;
     gap: 100px;
 }
+.sect p {
+    padding-bottom: 20px;
+}
 .social {
     display: flex;
     gap: 20px;
 }
+
 .social img {
-    width: 40px;
+    width: 35px;
     cursor: pointer;
 }
 .last {
@@ -372,311 +401,333 @@ footer .logoPart {
     background: #ffffff;
     overflow: hidden;
 }
-/* ===== TABLET (max-width: 1024px) ===== */
-@media (max-width: 1024px) {
+
+@media (max-width: 1200px) {
     nav {
         margin: 0 2rem;
         padding: 13px 30px;
     }
-
+ 
     .before, .after {
-        margin: 50px 4rem 0 4rem;
+        margin: 50px 8rem 0 8rem;
+    }
+ 
+    .before img, .after img {
+        width: 20rem;
+    }
+ 
+    .grid {
+        margin: 6rem 4rem;
+    }
+ 
+    .video video {
+        width: 100%;
+        max-width: 60rem;
+    }
+ 
+    .hh {
+        padding-left: 4rem;
+    }
+ 
+    .near img {
+        width: 26rem;
+    }
+ 
+    #donate input {
+        padding: 24px 10rem 24px 40px;
+    }
+ 
+    #donate button {
+        padding: 18px 8rem;
+    }
+}
+ 
+/* Tablets (max 900px) */
+@media (max-width: 900px) {
+    /* Nav becomes hamburger */
+    nav {
+        margin: 0 1rem;
+        padding: 13px 24px;
+        border-radius: 50px;
+        flex-wrap: wrap;
+        position: sticky;
+        top: 0;
+    }
+ 
+    .menu-toggle {
+        display: flex;
+    }
+ 
+    .sides {
+        display: none;
         flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 16px;
+        padding: 16px 0 8px;
+    }
+ 
+    .sides.open {
+        display: flex;
+    }
+ 
+    /* Hero */
+    .main {
+        padding-top: 5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+ 
+    .main h1 {
+        font-size: 2.4rem;
+        letter-spacing: 3px;
+    }
+ 
+    .main p {
+        font-size: 16px;
+    }
+ 
+    .main p br { display: none; }
+ 
+    .main button {
+        padding: 14px 40px;
+        font-size: 16px;
+    }
+ 
+    /* Slides */
+    .slides-track img {
+        width: 220px;
+    }
+ 
+    /* About section */
+    .overlap {
+        margin-top: 6rem;
+    }
+ 
+    .before, .after {
+        flex-direction: column;
+        margin: 30px 2rem 0 2rem;
+        padding: 50px 30px;
         text-align: center;
-        padding: 50px 20px;
     }
-
-    .before div, .after div {
-        padding: 20px 0 0 0;
-    }
-
+ 
     .after {
         flex-direction: column-reverse;
     }
-
-    .grid {
-        margin: 4rem 2rem;
+ 
+    .before img, .after img {
+        width: 100%;
+        max-width: 22rem;
     }
-
+ 
+    .before div {
+        padding-left: 0;
+        padding-top: 30px;
+    }
+ 
+    .after div {
+        padding-right: 0;
+        padding-top: 30px;
+    }
+ 
+    .before h4 br, .after h4 br { display: none; }
+ 
+    /* Impacts */
     .exp {
         margin: 60px 2rem 0 2rem;
+        padding: 60px 20px;
     }
+ 
+    .exp h1 {
+        font-size: 2.4rem;
+    }
+ 
+    .exp p br { display: none; }
+ 
+    .grid {
+        grid-template-columns: 1fr;
+        margin: 4rem 2rem;
+        gap: 2rem;
+        text-align: center;
+    }
+ 
+    .grid > div {
+        border-bottom: 1px solid #cfcfcf;
+        padding-bottom: 2rem;
+    }
+ 
+    .grid > div:last-child {
+        border-bottom: none;
+    }
+ 
+    .grid p br { display: none; }
+ 
+    .video {
+        margin-top: 4rem;
+        padding: 0 1rem;
+    }
+ 
     .video video {
         width: 100%;
-    height: 100%;
+        border-radius: 16px;
     }
+ 
+    /* Programs */
     .Pr {
-        padding: 4rem 3rem;
+        margin-top: 6rem;
+        padding: 4rem 2rem;
     }
-
-    .hh h1, .hh p {
+ 
+    .hh {
         padding-left: 0;
         text-align: center;
     }
-
+ 
+    .hh h1 {
+        font-size: 2.4rem;
+    }
+ 
+    .hh p br { display: none; }
+ 
     .near {
         flex-direction: column;
         align-items: center;
+        gap: 2rem;
     }
-
-    #inv {
-        display: none;
-    }
-
+ 
+    #inv { display: none; }
+ 
     .vs {
         width: 100%;
         max-width: 500px;
     }
-
+ 
+    .near img {
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+ 
+    /* Donate */
     #donate {
         flex-direction: column;
-        margin: 6rem 3rem;
-        padding: 60px 20px;
+        align-items: center;
+        margin: 6rem 1.5rem;
+        padding: 60px 30px;
         text-align: center;
     }
-
+ 
+    #donate h1 {
+        font-size: 2.2rem;
+    }
+ 
+    #donate p br { display: none; }
+ 
     .inputPr {
         margin-left: 0;
-        margin-top: 30px;
+        margin-top: 40px;
+        padding: 40px 30px;
         width: 100%;
     }
-
+ 
     #donate input {
-        padding: 20px 40px;
+        padding: 20px 20px;
         width: 100%;
+        display: block;
     }
-
+ 
+    #donate .textarea {
+        padding-bottom: 8rem;
+    }
+ 
     #donate button {
-        padding: 18px 4rem;
+        padding: 18px 0;
         width: 100%;
+        margin-top: 1.5rem;
     }
-
+ 
+    /* Footer */
     footer {
-        padding: 30px 3rem;
         flex-direction: column;
-        gap: 30px;
+        align-items: center;
         text-align: center;
-    }
-
-    .sect {
+        padding: 40px 2rem;
         gap: 40px;
+    }
+ 
+    footer > div:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    footer h1 {
+        font-size: 1.6rem;
+    }
+ 
+    footer h1 br { display: none; }
+ 
+    .logoPart {
         justify-content: center;
     }
-}
-
-/* ===== MOBILE (max-width: 768px) ===== */
-@media (max-width: 768px) {
-    nav {
-        margin: 0 1rem;
-        padding: 13px 20px;
-        border-radius: 20px;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    .sides {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 1rem;
-        right: 1rem;
-        background: #FBF6FF;
-        border-radius: 20px;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        gap: 16px;
-        box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-    }
-
-    .sides.open {
-        display: flex;
-    }
-
-    .main h1 {
-        font-size: 2.4rem;
-        padding-top: 4rem;
-    }
-
-    .main p {
-        font-size: 16px;
-    }
-
-    .main br {
-        display: none;
-    }
-
-    .main button {
-        padding: 15px 40px;
-        font-size: 16px;
-    }
-
-    .slides-track img {
-        width: 200px;
-    }
-
-    .before, .after {
-        margin: 30px 1rem 0 1rem;
-        padding: 30px 15px;
-        border-radius: 20px;
-    }
-
-    .overlap {
-        margin-top: 5rem;
-    }
-
-    .exp {
-        margin: 40px 1rem 0 1rem;
-        padding: 40px 15px;
-    }
-
-    .exp h1 {
-        font-size: 36px;
-    }
-
-    .exp p {
-        font-size: 16px;
-    }
-
-    .exp br {
-        display: none;
-    }
-    .video video {
-        width: 100%;
-    height: 100%;
-    }
-    .grid {
-        grid-template-columns: 1fr;
-        margin: 3rem 1rem;
-        gap: 2rem;
-    }
-
-    .grid div {
-        border-bottom: 1px solid #cfcfcf;
-        padding-bottom: 2rem;
-    }
-
-    .grid div:last-child {
-        border-bottom: none;
-    }
-
-    .video {
-        margin-top: 3rem;
-    }
-
-    .Pr {
-        margin-top: 5rem;
-        padding: 3rem 1rem;
-    }
-
-    .hh h1 {
-        font-size: 36px;
-    }
-
-    .hh p {
-        font-size: 16px;
-    }
-
-    .hh br {
-        display: none;
-    }
-
-    .near div h4, .near div p {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .near div h4 {
-        font-size: 17px;
-    }
-
-    .near div p {
-        font-size: 16px;
-    }
-
-    #donate {
-        margin: 4rem 1rem;
-        padding: 40px 15px;
-        border-radius: 15px;
-    }
-
-    #donate h1 {
-        font-size: 32px;
-    }
-
-    #donate br {
-        display: none;
-    }
-
-    .inputPr {
-        padding: 30px 20px;
-        width: 100%;
-    }
-
-    #donate input {
-        padding: 18px 20px;
-        width: 100%;
-        font-size: 15px;
-    }
-
-    #donate button {
-        padding: 18px;
-        width: 100%;
-        font-size: 18px;
-    }
-
-    footer {
-        padding: 30px 1.5rem;
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-    }
-
-    footer h1 {
-        font-size: 24px;
-    }
-
-    footer br {
-        display: none;
-    }
-
+ 
     .sect {
         flex-direction: column;
-        gap: 30px;
         align-items: center;
+        gap: 40px;
+        text-align: center;
     }
-
+ 
     .social {
         justify-content: center;
     }
-
-    .last img {
-        min-width: 50%;
-    }
 }
-
-/* ===== SMALL MOBILE (max-width: 480px) ===== */
+ 
+/* Mobile (max 480px) */
 @media (max-width: 480px) {
+    nav {
+        margin: 0 0.5rem;
+        padding: 10px 16px;
+        border-radius: 30px;
+    }
+ 
     .main h1 {
         font-size: 1.9rem;
+        letter-spacing: 2px;
     }
-
-    .before button, .after button {
-        padding: 12px 30px;
+ 
+    .main p {
+        font-size: 14px;
+    }
+ 
+    .main button {
+        padding: 12px 28px;
         font-size: 15px;
+        margin-top: 30px;
     }
-    .video video {
-        width: 100%;
-    height: 100%;
+ 
+    .rBtn {
+        margin-left: 10px;
     }
-    .exp h1, .hh h1 {
-        font-size: 28px;
+ 
+    .slides-track img {
+        width: 180px;
     }
-
+ 
+    .exp h1,
+    .hh h1 {
+        font-size: 2rem;
+    }
+ 
+    .grid h1 {
+        font-size: 2.5rem;
+    }
+ 
     #donate h1 {
-        font-size: 26px;
+        font-size: 1.8rem;
+    }
+ 
+    .before h4, .after h4 {
+        font-size: 17px;
+        letter-spacing: 1.5px;
     }
 }
-
