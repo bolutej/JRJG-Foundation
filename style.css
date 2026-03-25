@@ -401,7 +401,30 @@ footer {
     background: #ffffff;
     overflow: hidden;
 }
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #A859F3;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999;
+}
 
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast.error {
+  background: #f44336;
+}
 @media (max-width: 1200px) {
     nav {
         margin: 0 2rem;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSJG Foundation</title>
+    <title>JRJG Foundation</title>
     <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
@@ -163,12 +163,12 @@
             <h1>Join the 100+<br> Contributors</h1>
             <p>We are committed to nurturing their potential<br> and equipping them to build brighter futures.</p>
             </div>
-            <div class="inputPr">
-                <input type="name" placeholder="Full Name"><br>
-                <input type="email" placeholder="Email Address"><br>
-                <input type="text" placeholder="Tell us what you like to do" class="textarea"><br>
+            <form class="inputPr" id="form">
+                <input type="name" placeholder="Full Name" id="name"><br>
+                <input type="email" placeholder="Email Address" id="email"><br>
+                <input type="text" placeholder="Tell us what you like to do" class="textarea" id="message"><br>
                 <button>Get Involved</button>
-            </div>
+            </form>
         </div>
     </div>
      
@@ -205,6 +205,7 @@
     <img src="images/last.png">
     <img src="images/last.png">
 </div>
+<div class="toast" id="toast"></div>
     <script src="script.js"></script>
 </body>
 </html>
