@@ -225,7 +225,8 @@ nav a:hover {
 }
 .before button, .after button {
     padding: 13px 40px;
-    font-size: 17px;
+    font-size: 18px;
+    font-weight: 550;
     border: 0;
     background: #E5CDFB;
     border-radius: 20px;
@@ -342,7 +343,8 @@ nav a:hover {
     background: #FBF6FF;
 }
 #donate input:focus {
-  outline: none;
+  /* outline: none; */
+  outline-color: #cb99fa;
 }
 .inputPr {
     background: #ffff;
@@ -386,6 +388,9 @@ footer {
 }
 .sect p {
     padding-bottom: 20px;
+}
+.sect ul li {
+    font-size: 15px;
 }
 .social {
     display: flex;
