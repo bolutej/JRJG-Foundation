@@ -15,14 +15,22 @@ html {
     height: auto;
     display: block;
 } */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 body {
     padding: 0;
     margin: 0;
     background: #FBF6FF;
     font-family: "Bricolage Grotesque";
+    overflow-x: hidden;
 }
-
+body p {
+    color: #1a1a1ab2;
+}
 .bg {
     background: white;
     padding-bottom: 7rem;
@@ -121,13 +129,19 @@ nav a:hover {
     /* padding-left: 1rem;
     padding-right: 1rem; */
 }
+.main a {
+    display: inline-block;
+}
 .main h1 {
-    font-size: 3.5rem;
-    letter-spacing: 5px;
+    font-size: 4rem;
+    letter-spacing: 4.5px;
+    line-height: 1;
 }
 .main p {
     font-size: 18px;
     margin-top: 20px;
+    letter-spacing: 2px;
+    line-height: 1.5;
 }
 .main button {
     font-family: "Bricolage Grotesque";
@@ -211,13 +225,15 @@ nav a:hover {
 }
 .before h4, .after h4 {
     font-size: 20px;
+    font-weight: 800;
     padding-top: 30px;
-    letter-spacing: 2.5px;
-    line-height: 1.7;
+    letter-spacing: 2px;
+    line-height: 1.4;
 }
 .before p, .after p {
     font-size: 16px;
     padding-top: 50px;
+    line-height: 1.4;
 }
 .before img, .after img {
     border-radius: 30px;
@@ -225,7 +241,7 @@ nav a:hover {
 }
 .before button, .after button {
     padding: 13px 40px;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 550;
     border: 0;
     background: #E5CDFB;
@@ -304,17 +320,27 @@ nav a:hover {
     border-radius: 30px;
     margin-top: 5rem;
 }
+.vs button {
+    background: white;
+    margin: 25px 0px 2px 50px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 0;
+    font-weight: 700;
+    
+}
 .near div h4 {
     padding-left: 50px;
     font-size: 18px;
-    padding-top: 30px;
+    padding-top: 25px;
 }
 .near div p {
     padding-left: 50px;
     font-size: 14px;
     padding-top: 30px;
     padding-bottom: 50px;
-    padding: 30px 50px ;
+    line-height: 1.4;
+    /* padding: 30px 50px ; */
 }
 
 
@@ -480,6 +506,27 @@ footer {
         flex-wrap: wrap;
         position: sticky;
         top: 0;
+        gap: 8px;
+    }
+
+    .brand {
+        min-width: 0;
+        gap: 8px;
+    }
+
+    .line {
+        display: none;
+    }
+
+    nav p {
+        padding-right: 0;
+        font-size: 12px;
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    nav .span {
+        letter-spacing: 2px;
     }
  
     .menu-toggle {
@@ -493,6 +540,9 @@ footer {
         align-items: center;
         gap: 16px;
         padding: 16px 0 8px;
+        margin-top: 8px;
+        background: #ffffff;
+        border-radius: 16px;
     }
  
     .sides.open {
@@ -508,18 +558,21 @@ footer {
  
     .main h1 {
         font-size: 2.4rem;
-        letter-spacing: 3px;
+        letter-spacing: 1.8px;
     }
  
     .main p {
         font-size: 16px;
+        letter-spacing: 0.6px;
+        line-height: 1.6;
     }
  
     .main p br { display: none; }
  
     .main button {
-        padding: 14px 40px;
+        padding: 14px 34px;
         font-size: 16px;
+        margin-top: 24px;
     }
  
     /* Slides */
@@ -559,6 +612,10 @@ footer {
     }
  
     .before h4 br, .after h4 br { display: none; }
+    .before p br, .after p br { display: none; }
+    .before p, .after p {
+        padding-top: 24px;
+    }
  
     /* Impacts */
     .exp {
@@ -574,7 +631,7 @@ footer {
  
     .grid {
         grid-template-columns: 1fr;
-        margin: 4rem 2rem;
+        margin: 4rem 0.5rem;
         gap: 2rem;
         text-align: center;
     }
@@ -634,6 +691,20 @@ footer {
         width: 100%;
         border-radius: 20px 20px 0 0;
     }
+
+    .vs button {
+        margin: 20px 24px 2px 24px;
+    }
+
+    .near div h4,
+    .near div p {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .near div p {
+        padding-bottom: 32px;
+    }
  
     /* Donate */
     #donate {
@@ -655,6 +726,7 @@ footer {
         margin-top: 40px;
         padding: 40px 30px;
         width: 100%;
+        max-width: 560px;
     }
  
     #donate input {
@@ -709,6 +781,32 @@ footer {
         justify-content: center;
     }
 }
+
+@media (max-width: 640px) {
+    .main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .main a {
+        display: block;
+    }
+
+    .main button {
+        width: 100%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .rBtn {
+        margin-left: 0;
+    }
+
+    nav p {
+        font-size: 11px;
+    }
+}
  
 /* Mobile (max 480px) */
 @media (max-width: 480px) {
@@ -717,14 +815,25 @@ footer {
         padding: 10px 16px;
         border-radius: 30px;
     }
+
+    nav p {
+        font-size: 10px;
+        line-height: 1.1;
+    }
+
+    nav .span {
+        letter-spacing: 1px;
+    }
  
     .main h1 {
         font-size: 1.9rem;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
+        line-height: 1.15;
     }
  
     .main p {
         font-size: 14px;
+        letter-spacing: 0.3px;
     }
  
     .main button {
@@ -734,7 +843,7 @@ footer {
     }
  
     .rBtn {
-        margin-left: 10px;
+        margin-left: 0;
     }
  
     .slides-track img {
@@ -757,5 +866,30 @@ footer {
     .before h4, .after h4 {
         font-size: 17px;
         letter-spacing: 1.5px;
+    }
+
+    .before,
+    .after {
+        margin: 24px 1rem 0 1rem;
+        padding: 36px 18px;
+    }
+
+    .exp {
+        margin: 50px 1rem 0 1rem;
+    }
+
+    .Pr {
+        padding: 3rem 1rem;
+    }
+
+    #donate {
+        margin: 5rem 1rem;
+        padding: 40px 18px;
+    }
+
+    .toast {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
     }
 }
