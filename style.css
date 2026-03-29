@@ -29,7 +29,7 @@ body {
     overflow-x: hidden;
 }
 body p {
-    color: #1a1a1ab2;
+    color: #070707b2;
 }
 .bg {
     background: white;
@@ -48,6 +48,8 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
+    
+
 }
 .first {
     font-weight: 900;
@@ -64,6 +66,7 @@ nav p {
     padding-right: 30px;
     font-weight: 500;
     margin: 0;
+    color: black;
 }
 nav a {
     color: black;
@@ -145,7 +148,7 @@ nav a:hover {
 }
 .main button {
     font-family: "Bricolage Grotesque";
-    padding: 15px 60px;
+    padding: 12px 55px;
     border-radius: 20px;
     border: 0;
     color: white;
@@ -240,9 +243,10 @@ nav a:hover {
     width: 28rem;
 }
 .before button, .after button {
+    font-family: "Bricolage Grotesque";
     padding: 13px 40px;
     font-size: 15px;
-    font-weight: 550;
+    font-weight: 600;
     border: 0;
     background: #E5CDFB;
     border-radius: 20px;
@@ -327,6 +331,7 @@ nav a:hover {
     border-radius: 20px;
     border: 0;
     font-weight: 700;
+    font-family: "Bricolage Grotesque";
     
 }
 .near div h4 {
@@ -388,7 +393,7 @@ nav a:hover {
     border: 0;
     background: #A859F3;
     color: white;
-    padding: 18px 13.3rem;
+    padding: 13px 13.3rem;
     margin-top: 2.5rem;
     cursor: pointer;
     font-size: 15px;
@@ -407,6 +412,10 @@ footer {
     align-items: center;
     gap: 10px;
     padding-bottom: 30px;
+    
+}
+.logoPart p {
+    color: black;
 }
 .sect {
     display: flex;
@@ -414,6 +423,7 @@ footer {
 }
 .sect p {
     padding-bottom: 20px;
+    color: black;
 }
 .sect ul li {
     font-size: 15px;
@@ -488,11 +498,14 @@ footer {
     }
  
     #donate input {
-        padding: 24px 10rem 24px 40px;
+        padding: 20px 10rem 24px 40px;
     }
  
     #donate button {
-        padding: 18px 8rem;
+        padding: 13px 8rem;
+    }
+    .sect li {
+        color: black;
     }
 }
  
@@ -570,9 +583,9 @@ footer {
     .main p br { display: none; }
  
     .main button {
-        padding: 14px 34px;
+        padding: 14px 20px;
         font-size: 16px;
-        margin-top: 24px;
+        
     }
  
     /* Slides */
@@ -671,8 +684,13 @@ footer {
     .hh h1 {
         font-size: 2.4rem;
     }
- 
-    .hh p br { display: none; }
+    .hh p {
+        width: 26rem;
+    }
+    .hh p br { 
+        display: none;
+        
+     }
  
     .near {
         flex-direction: column;
@@ -740,7 +758,7 @@ footer {
     }
  
     #donate button {
-        padding: 18px 0;
+        padding: 15px 0;
         width: 100%;
         margin-top: 1.5rem;
     }
@@ -780,6 +798,9 @@ footer {
     .social {
         justify-content: center;
     }
+    .sect li {
+        color: black;
+    }
 }
 
 @media (max-width: 640px) {
@@ -788,14 +809,12 @@ footer {
         padding-right: 1rem;
     }
 
-    .main a {
-        display: block;
-    }
+    
 
     .main button {
-        width: 100%;
+        /* width: 100%; */
         max-width: 300px;
-        margin-left: auto;
+        margin-left: 10px;
         margin-right: auto;
     }
 
@@ -805,6 +824,9 @@ footer {
 
     nav p {
         font-size: 11px;
+    }
+    .sect li {
+        color: black;
     }
 }
  
@@ -826,7 +848,7 @@ footer {
     }
  
     .main h1 {
-        font-size: 1.9rem;
+        font-size: 2.5rem;
         letter-spacing: 1px;
         line-height: 1.15;
     }
@@ -850,10 +872,6 @@ footer {
         width: 180px;
     }
  
-    .exp h1,
-    .hh h1 {
-        font-size: 2rem;
-    }
  
     .grid h1 {
         font-size: 2.5rem;
@@ -886,7 +904,9 @@ footer {
         margin: 5rem 1rem;
         padding: 40px 18px;
     }
-
+    .sect li {
+        color: black;
+    }
     .toast {
         left: 16px;
         right: 16px;
