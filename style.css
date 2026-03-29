@@ -10,11 +10,6 @@ html {
     box-sizing: border-box;
 }
 
-/* img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-} */
 img {
     max-width: 100%;
     height: auto;
@@ -129,8 +124,6 @@ nav a:hover {
     
     padding-top: 8rem;
     text-align: center;
-    /* padding-left: 1rem;
-    padding-right: 1rem; */
 }
 .main a {
     display: inline-block;
@@ -167,6 +160,32 @@ nav a:hover {
 .main button a {
     color: white;
     text-decoration: none;
+}
+.tw-line {
+  display: block;
+  min-height: 1em;
+}
+.tw-text { display: inline; }
+.cursor {
+  display: inline-block;
+  width: .08em; height: .85em;
+  margin-left: 4px;
+  vertical-align: middle;
+  animation: blink .75s step-end infinite;
+  position: relative; top: -4px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.static-line {
+  display: block;
+  opacity: 1;
+  transform: translateY(16px);
+  animation: fadeUp .7s .5s ease forwards;
+  padding-bottom: 20px;
 }
 .slides {
     overflow: hidden;
@@ -227,7 +246,7 @@ nav a:hover {
     padding-right: 40px;
 }
 .before h4, .after h4 {
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 800;
     padding-top: 30px;
     letter-spacing: 2px;
@@ -345,13 +364,11 @@ nav a:hover {
     padding-top: 30px;
     padding-bottom: 50px;
     line-height: 1.4;
-    /* padding: 30px 50px ; */
 }
 
 
 #donate {
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
     margin: 10rem 4rem;
     background: #FBF6FF;
@@ -363,9 +380,6 @@ nav a:hover {
     padding-bottom: 20px;
     padding-top: 30px;
 }
-/* #donate p {
-    padding: 0;
-} */
 #donate input {
     padding: 24px 18rem 24px 40px;
     border-radius: 20px;
@@ -374,7 +388,6 @@ nav a:hover {
     background: #FBF6FF;
 }
 #donate input:focus {
-  /* outline: none; */
   outline-color: #cb99fa;
 }
 .inputPr {
@@ -384,11 +397,10 @@ nav a:hover {
     border-radius: 20px;
 }
 #donate .textarea {
-    /* height: 100px; */
     padding-bottom: 16rem;
 }
 #donate button {
-    /* font-family: "Bricolage Grotesque"; */
+    font-family: "Bricolage Grotesque";
     border-radius: 15px;
     border: 0;
     background: #A859F3;

@@ -50,5 +50,50 @@ try {
     showToast("❌ Network error. Try again.", "error");
   }
 }
+const WORDS = [
+  'Compassion.',
+  'Charity.',
+  'Empathy.',
+  'Solicitiude.',
+];
 
+const TYPE_SPEED   = 80;    // ms per character
+const DELETE_SPEED = 45;    // ms per character (faster = snappier)
+const PAUSE_AFTER  = 1800;  // ms after word is fully typed
+const PAUSE_BEFORE = 300;   // ms before next word starts
+
+const el = document.getElementById('tw');
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function tick() {
+  const word = WORDS[wordIndex];
+
+  if (!isDeleting) {
+    charIndex++;
+    el.textContent = word.slice(0, charIndex);
+
+    if (charIndex === word.length) {
+      isDeleting = true;
+      setTimeout(tick, PAUSE_AFTER);
+      return;
+    }
+    setTimeout(tick, TYPE_SPEED);
+
+  } else {
+    charIndex--;
+    el.textContent = word.slice(0, charIndex);
+
+    if (charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % WORDS.length;
+      setTimeout(tick, PAUSE_BEFORE);
+      return;
+    }
+    setTimeout(tick, DELETE_SPEED);
+  }
+}
+
+setTimeout(tick, 900); // slight delay so page paints first
 document.getElementById("form").addEventListener("submit", sendMessage);
